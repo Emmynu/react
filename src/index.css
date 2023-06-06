@@ -36,6 +36,7 @@
     --borderRadius: .25rem;
     --letterSpacing: 1px;
     --transition: .3s ease-in-out all;
+    --trans: all 1s linear;
     --max-width: 1120px;
     --fixed-width: 600px;
     --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06);
@@ -43,5 +44,54 @@
     --shadow-3: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05);
     --shadow-4: 0 20px 25px -5px rgba(0, 0, 0, .1), 0 10px 10px -5px rgba(0, 0, 0, .04);
     }
-    
+    body{
+      background-color: var(--primary-300);
+      @apply mb-5
+    }
+    #root{
+      @apply bg-white p-6 rounded-md ;
+      margin: 3% auto 0;
+      width: 40%;
+      box-shadow: var(--shadow-2);
+    }
+    .nav-container{
+      @apply  text-2xl font-medium mb-5 lg:text-3xl
+    }
+    .person{
+      @apply flex mt-5 items-center
+    }
+    .image{
+      @apply rounded-full;
+      width: 80px;
+      height: 80px;
+    }
+    .person-details-container{
+      @apply ml-4;
+    }
+    .person-details-container h3{
+      @apply text-lg font-medium text-slate-800 tracking-wide md:text-xl lg:text-2xl 
+    }
+    .person-details-container h4{
+      @apply text-sm font-medium text-slate-600 leading-4 md:text-base lg:text-base
+    }
+    .remove{
+      @apply text-sm font-medium;
+      color: var(--primary-700);
+    }
+    .clear{
+      background-color: var(--primary-600);
+      transition: var(--trans);
+      @apply text-white font-medium text-base w-full py-0.5 mt-2 cursor-pointer shadow-lg 
+    }
+    .clear:hover{
+      @apply opacity-40;
+
+    }
+  }
+
+  @media (max-width:800px) {
+    #root{
+      margin: 20% auto 0;
+      width: 91%;
+    }
   }
